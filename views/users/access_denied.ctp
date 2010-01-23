@@ -1,0 +1,1 @@
+<h1><?php echo $this->pageTitle = __('Access denied', true);?></h1>

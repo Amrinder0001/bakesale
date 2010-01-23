@@ -1,0 +1,349 @@
+﻿#: Localization
+
+msgid "en"
+msgstr "fi" 
+
+
+#: General
+
+msgid "Homepage"
+msgstr "Etusivu"
+
+msgid "Name"
+msgstr "Nimi" 
+
+msgid "Actions"
+msgstr "Toiminnot" 
+
+msgid "Description"
+msgstr "Teksti"
+
+msgid "Active"
+msgstr "Tila"
+
+msgid "Sort"
+msgstr "Järjestys"
+
+msgid "Edit"
+msgstr "Muokkaa"
+
+msgid "Delete"
+msgstr "Poista"
+
+msgid "Add"
+msgstr "Lisää"
+
+msgid "Save"
+msgstr "Tallenna"
+
+msgid "Shop view"
+msgstr "Kaupan näkymä"
+
+
+#: Admin
+
+msgid "Admin"
+msgstr "Hallinta"
+
+msgid "Settings"
+msgstr "Asetukset"
+
+
+#: Content
+
+msgid "Contents"
+msgstr "Sivut"
+
+msgid "Add content"
+msgstr "Lisää sivu" 
+
+msgid "Edit content"
+msgstr "Muokkaa sivua" 
+
+
+#: Content categories
+
+msgid "Content category"
+msgstr "Sivukategoria"
+
+msgid "Add content category"
+msgstr "Lisää sivukategoria" 
+
+msgid "Edit content category"
+msgstr "Muokkaa sivukategoriaa" 
+
+
+#: Country
+
+msgid "Country"
+msgstr "Maa"
+
+msgid "Countries"
+msgstr "Maat"
+
+msgid "Add country"
+msgstr "Lisää maa" 
+
+msgid "Edit country"
+msgstr "Muokkaa maata" 
+
+
+#: Images
+
+msgid "Images"
+msgstr "Kuvat"
+
+msgid "Add image"
+msgstr "Lisää kuva"
+
+msgid "Image too big."
+msgstr "Lähettämsäi kuva oli liian suuri."
+
+msgid "Your size: %s, maximum %s"
+msgstr "Lähettmäsi kuvan koko oli %s pikseliä, maksimikoko kuville on %s pikseliä. Ole hyvä ja pienennä kuvaa kuvankäsittelyohjelmassa."
+
+
+#: Product
+
+msgid "Product"
+msgstr "Tuote"
+
+msgid "Products"
+msgstr "Tuotteet"
+
+msgid "Add product"
+msgstr "Lisää tuote"
+
+msgid "Edit product"
+msgstr "Muokkaa tuotetta"
+
+msgid "No products"
+msgstr "Ei tuotteita"
+
+msgid "Stock"
+msgstr "Varasto"
+
+msgid "Special price"
+msgstr "Tarjoushinta"
+
+msgid "Weight"
+msgstr "Paino"
+
+
+#: Brand
+
+msgid "Brand"
+msgstr "Merkki"
+
+msgid "Brands"
+msgstr "Merkit"
+
+msgid "Add brand"
+msgstr "Lisää merkki"
+
+msgid "Edit brand"
+msgstr "Muokkaa merkki"
+
+msgid "Other %s products"
+msgstr "Muut %s tuotteet"
+
+
+#: Category
+
+msgid "Categories"
+msgstr "Kategoriat"
+
+msgid "Add category"
+msgstr "Lisää kategoria"
+
+msgid "Edit category"
+msgstr "Muokkaa kategoriaa"
+
+
+#: Search
+
+msgid "Search"
+msgstr "Haku"
+
+msgid "Search results for: %s"
+msgstr "Tulokset haulle: %s"
+
+
+#: Payment method
+
+msgid "Payment Method"
+msgstr "Maksutapa"
+
+msgid "Payment methods"
+msgstr "Maksutavat"
+
+msgid "Add payment method"
+msgstr "Lisää maksutapa"
+
+msgid "Edit payment method"
+msgstr "Muokkaa maksutapaa" 
+
+msgid "Just %s available"
+msgstr "Vain %s varastossa"
+
+msgid "Processor"
+msgstr "Ksittelijä"
+
+
+#: Shipping method
+
+msgid "Shipping Method"
+msgstr "Toimitustapa"
+
+msgid "Shipping methods"
+msgstr "Toimitustavat"
+
+msgid "Add shipping method"
+msgstr "Lisää toimitustapa"
+
+
+#: Subproducts
+
+msgid "Add subproduct"
+msgstr "Lisää vaihtoehto"
+
+msgid "Subproducts"
+msgstr "Vaihtoehdot"
+
+msgid "Price change"
+msgstr "Hinnan muutos"
+
+msgid "Weight change"
+msgstr "Painon muutos"
+
+
+#: Special
+
+msgid "Special"
+msgstr "Tarjous"
+
+msgid "Specials"
+msgstr "Tarjoukset"
+
+
+#: Order
+
+msgid "Orders"
+msgstr "Tilaukset"
+
+msgid "Confirm order"
+msgstr "Vahvista tilaus"
+
+msgid "Order confirmation"
+msgstr "tilausvahvistus"
+
+msgid "Order number"
+msgstr "Tilausnumero"
+
+msgid "Order date"
+msgstr "Tilattu"
+
+msgid "Order sent"
+msgstr "Tilaus lähetetty"
+
+msgid "Billing address"
+msgstr "Laskutusosoite"
+
+msgid "Shipping address"
+msgstr "Toimitusosoite"
+
+msgid "Same as billing address"
+msgstr "Sama kuin laskutusosoite"
+
+msgid "Firstname"
+msgstr "Etunimi"
+
+msgid "Lastname"
+msgstr "Sukunimi"
+
+msgid "Address"
+msgstr "Osoite"
+
+msgid "Phone"
+msgstr "Puhelinnumero"
+
+msgid "Postcode"
+msgstr "Postinumero"
+
+msgid "City"
+msgstr "Postitoimipaikka"
+
+msgid "Required field"
+msgstr "Tarvittava tieto"
+
+msgid "Payment method"
+msgstr "Maksutapa"
+
+msgid "Shipping method"
+msgstr "Toimitustapa"
+
+
+#: Shipping rules
+
+msgid "Shipping rules"
+msgstr "Toimitustaulukko"
+
+msgid "Type"
+msgstr "Tyyppi"
+
+
+#: Shopping cart
+
+msgid "Shopping cart"
+msgstr "Ostoskori"
+
+msgid "Add to cart"
+msgstr "Ostoskoriin"
+
+msgid "Subtotal"
+msgstr "Tuotteet"
+
+msgid "Shipping"
+msgstr "Toimitus"
+
+msgid "Total"
+msgstr "Yhteens"
+
+msgid "Checkout"
+msgstr "Tilaa"
+
+msgid "Comments"
+msgstr "Kommentit"
+
+msgid "Remove"
+msgstr "Poista"
+
+msgid "Quantity"
+msgstr "Määrä"
+
+msgid "Update"
+msgstr "Päivitä"
+
+msgid "Minimum order"
+msgstr "Minimitilaus"
+
+
+#misc
+
+msgid "Plugins"
+msgstr "Laajennukset"
+
+msgid "Price"
+msgstr "Hinta"
+
+msgid "State"
+msgstr "Osavaltio"
+
+msgid "Shop"
+msgstr "Kauppa"
+
+msgid "Larger image"
+msgstr "Suurempi kuva"
+
+msgid "New products"
+msgstr "Uutuudet"

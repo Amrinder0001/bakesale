@@ -1,0 +1,11 @@
+/* product details */
+div.productwrapper { width:683px;float:left}
+div.details {float:left;text-align:center;width:374px;}
+div.description div.price {font: normal 18px "Tahoma" Arial, Helvetica, sans-serif;padding:0.8em 0;}
+div.description a {display:block;margin:auto;}
+div.description form {margin-top:0.5em;}
+div.description button {display:block;}
+div.description {float:right;width:290px;}div.description h4{margin:0px;padding:9px 0px 3px 0;color:#7c7c7c}div.description ul li {display:block!important;margin-top:5px}div.description ul li input{vertical-align:top;margin-right:5px;}
+button span {background: url(<?php echo $html->url('/img/icon_cart.png'); ?>) center left no-repeat;display:block;padding:2px 0 2px 30px;}
+/* demo products */
+p.demo {padding:1em 2em;background:#ffe;border:1px solid #ccc;}.description-dt{height:150px;overflow:auto;text-align:left}/* .line-solid{border-top:1px solid #ccc;width:683px;float:left;margin-top:10px}.bx-recommend{width:380px;border-right:1px solid #ccc;margin-top:5px} */

@@ -1,0 +1,63 @@
+/* ie6 fixes */
+
+* html div.details, 
+h2, 
+#header, 
+ul.cols, 
+div.productwrapper,
+fieldset li,
+#contentfloatholder,
+* html #container   {
+zoom:1;
+}
+
+
+
+* html div.details {
+margin-right:-85px;
+}
+
+* html #cart h2 a, 
+* html button span {
+background-image: url(none);
+}
+
+* html body.a-checkout div#center  fieldset {
+width:30%;
+}
+
+button span {
+padding:2px 0 2px 5px;
+}
+
+/* ie7 fixes */
+
+/* common fixes */
+
+#left li a {
+display:inline-block;
+}
+
+#left li a {
+display:block;
+}
+
+a.admin.show:visited {
+position:absolute;
+z-index:2000;
+color:#fff;
+}
+
+
+a.checkout:visited {
+color:#333;
+}
+
+div.input {
+line-height:1.9em;
+margin-bottom:1em;
+}
+
+#header {
+min-height:100px;
+}

@@ -1,0 +1,22 @@
+#content {
+width:400px;
+margin:2em auto;
+}
+
+#content ul {
+max-height:400px;
+overflow:auto;
+background:#ffe;
+border:1px solid #ccc;
+line-height:1.5em;
+list-style:none;
+}
+
+#content ul a {
+display:block;
+padding:0 1em;
+}
+
+#content ul a:hover {
+background-color:#EDF2F9;
+}

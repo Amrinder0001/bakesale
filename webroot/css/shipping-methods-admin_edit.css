@@ -1,0 +1,75 @@
+/* general styling */
+
+div#content {
+max-width:1000px;
+margin:auto;
+}
+
+div.combined {
+background:#eee;
+border:1px solid #ccc;
+-moz-border-radius:5px;
+width:43%;
+float:left;
+}
+
+/* base information */
+
+div#ShippingMethod form {
+padding:0 2em;
+}
+
+div#ShippingMethod fieldset {
+clear:none;
+padding:0;
+float:left;
+}
+
+fieldset.countries {
+width:15em;
+}
+
+/* shipping rules */
+
+#ShippingRule  {
+padding:1em 1em 1em 1em;
+}
+
+
+#ShippingRuleAddForm  {
+border:0;
+}
+
+form#ShippingRuleAddForm div.submit{
+padding-top:2.3em;
+float:left;
+clear:none;
+}
+
+#ShippingRuleAddForm div{
+float:left;
+padding:4px;
+}
+
+#ShippingRuleAddForm input {
+margin-bottom:1em;
+}
+
+#ShippingRule table {
+background:#fff;
+}
+
+#ShippingRule td{
+border:0;
+}
+
+#ShippingRule input {
+float:left;
+width:4em;
+padding:2px;
+}
+
+table label {
+position:absolute;
+top:-10000px;
+}

@@ -1,0 +1,619 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+html, 
+body {
+height:100%;
+}
+
+body {
+background: #eee;
+color: #444;
+font-size: 76%;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+max-width:950px;
+min-width: 30em;
+text-align:center;
+margin:0 auto;
+}
+
+img {
+border: 0;
+}
+
+a{
+text-decoration:underline;
+font-weight:bold;
+}
+
+a:link{
+color:#009;
+}
+
+a:visited{
+color:#913A57;
+}
+
+a:hover,
+a:active{
+color:#f90;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+font-family:Arial,Helvetica,sans-serif;
+font-weight:bold;
+line-height:1.1em;
+}
+
+h2,
+h3,
+h4,
+h5 {
+margin:2em 0 1em;
+}
+
+h1{
+font-size:1.4em;
+margin-bottom:1em;
+}
+
+h2{
+font-size:1.2em;
+}
+
+h3{
+font-size:1.1em;
+}
+
+h4{
+font-size:1.1em;
+}
+
+h5{
+font-size:1.0em;
+}
+
+ul, 
+p, 
+ol, 
+dl {
+margin-top:1em;
+line-height:1.5;
+}
+
+li {
+margin-left:2em;
+}
+
+/* layout */
+
+/* wrapper holds left faux column tab */
+/* nn6/7 will put content out of scrollable reach if auto is used unless the min-width is on body */
+
+div#wrapper { 
+text-align: left;
+margin: 2em auto; 
+background: #fff;
+border:1px solid #ccc;
+}
+
+div#header, 
+div#subnav, 
+div#footer {
+color: #000;
+clear: both; 
+width: 100%;
+}
+
+div#header {
+color: #fff; 
+height: 70px;
+}
+
+/* right faux column tab */
+
+div#contentfloatholder {
+float: left;
+width: 100%;
+}
+
+div#center {
+margin: 0 170px 0 170px;
+padding:1em 15px;
+min-height:300px;
+
+}
+
+div#centerwrap {
+float:left;
+width: 100%; 
+margin: 0 -95% 0 0;
+}
+
+div#left {
+float:left;
+width: 170px;
+margin: 0 0 0 -5%;
+padding-bottom:2em;
+}
+
+div#right {
+float:right;
+width: 170px;
+margin: 0;
+padding-bottom:2em;
+}
+
+
+/************* IE Mac CSS Only  works for Win too **************/
+
+* html div#centerwrap {
+margin: 0 -100% 0 0;
+}
+
+* html div#left {
+margin: 0;
+}
+
+/* clear floats */
+
+div#contentfloatholder:after,
+div#header:after,
+ul.cols:after,
+div.productwrapper:after,
+div#footer:after {
+content: "."; 
+display: block; 
+height: 0;
+clear: both; 
+visibility: hidden;
+}
+
+/* end layout */
+
+div#container {
+text-align:left;
+}
+
+/* header */
+
+div#header a#logo {
+float:left;
+background:transparent url(<?php echo $html->url('/img/logo.jpg'); ?>) no-repeat 50% 50%;
+height:100px;
+width:250px;
+text-indent:-3000px;
+}
+
+div#header form {
+margin: 2em 1em 0;
+width:26em;
+float:right;
+text-align:right;
+}
+
+div#header form label {
+display:block;
+position:absolute;
+top:-100em;
+}
+
+div#header form button {
+padding:0.2em 0.4em;
+display:inline;
+}
+
+
+/* horizontal navigation */
+
+div#subnav ul {
+background: #f90; 
+text-align:center;
+line-height: 2.5em;
+font-weight: bold;
+margin-top:0;
+clear:both;
+text-shadow:0 0 1px #000;
+letter-spacing:.1em;
+}
+
+div#subnav ul li {
+margin:0;
+display: inline;
+}
+
+div#subnav ul li a {
+color: #efefef;
+text-decoration: none;
+padding: 0.7em 2em;
+}
+
+div#subnav ul li a:hover {
+color:#fff;
+}
+
+#categoriesmenu a.current {
+background:#030;
+}
+
+
+/* breacumbs */
+
+div#breadcrumbs {
+font-size:smaller;
+margin: 0 0px 2em -0.5em;
+}
+
+div#breadcrumbs a, 
+div#breadcrumbs strong {
+margin:0 0.5em;
+font-weight:normal;
+}
+
+/* navigation contents */
+
+div#left h2, 
+div#right h2 {
+color:#000;
+font-size:1.1em;
+margin:0;
+line-height:1.5em;
+padding-left:5px;
+}
+
+div#left ul {
+margin:0;
+padding:1em 0;
+list-style:none;
+line-height:2.5em;
+}
+
+div#left li {
+margin:0;
+}
+
+div#left li a, 
+div#left li a:visited  {
+color:#666;
+text-decoration:none;
+display:block;
+padding-left:1em;
+border-bottom:1px dotted #ccc;
+}
+
+div#left li a:hover{
+color:#333;
+border-left:5px solid #f90;
+}
+
+
+/* shoppingcart */
+
+div#cart {
+border:1px solid #999;
+}
+
+div#cart h2, 
+div#cart a.checkout  {
+color:#fff;
+line-height:2.5em;
+padding-left:0.5em;
+border-bottom:1px dotted #999;
+margin:0 0.5em;
+}
+
+div#cart h2 a {
+background: url('/img/icon_cart.png') center left no-repeat;
+color:#000;
+display:block;
+padding-left:30px;
+}
+
+div#cart ul {
+list-style: none;
+}
+
+div#cart ul li {
+margin-left:1em;
+}
+
+div#cart ul.total {
+border-top:1px dotted #ccc;
+margin:1em 0.5em;
+text-align:right;
+padding:0.5em 0;
+}
+
+div#cart li.total {
+padding-top:0.5em;
+margin-top:0.5em;
+border-top:1px solid #ddd;
+font-weight:bold;
+}
+
+div#cart a.checkout {
+width:100%;
+display:block;
+padding:0;
+}
+
+
+/* prices */
+
+del {
+color: #999;
+text-decoration: line-through;
+}
+
+ins {
+color: #c30;
+font-weight: bold;
+text-decoration: none;
+}
+
+
+/* tables */
+
+table {
+margin-top:1em;
+width:100%;
+}
+
+td, 
+th {
+border-bottom:1px solid #ccc;
+padding:4px;
+vertical-align:top;
+}
+
+th {
+background-color:#eee;
+text-align:left;
+}
+
+
+/* Shopping cart table */
+
+table.cart {
+width:auto;
+margin:auto;
+border-left:1px solid #ccc;
+}
+
+table.cart tbody td, th {
+padding:1em;
+border-right:1px solid #ccc;
+}
+
+table.cart img {
+margin-right:1em;
+padding:5px;
+border:1px solid #ccc;
+}
+
+tfoot td {
+border:0;
+text-align:right;
+}
+
+table.cart td img {
+vertical-align:top;
+}
+
+table.cart input {
+width:2em;
+margin-right:0.5em;
+}
+
+span.error {
+display:block;
+margin-top:0.5em;
+padding:0.5em;
+margin-left:-4px;
+}
+
+
+/* product listing */
+
+ul.cols li {
+display:block;
+float:left;
+height:165px;
+padding:2em 1%;
+margin:0;
+text-align:center;
+width:30%;
+}
+
+ul.cols li a {
+display:block;
+}
+
+ul.cols li a:first-child {
+height:100px;
+line-height:100px;
+}
+
+ul.cols li a img {
+vertical-align:middle;
+}
+
+
+/* footer */
+
+div#footer {
+font-size:smaller;
+border-top:1px dotted #ccc;
+padding:0;
+}
+
+div#footer ul,
+div#footer p {
+padding:1em;
+margin:0;
+}
+
+div#footer ul {
+float:left;
+}
+
+div#footer p {
+float:right;
+}
+
+div#footer li {
+display:inline;
+margin:0 1em 0 0;
+}
+
+
+/* flash messages */
+
+div.fmessage {
+border-bottom:1px solid #333;
+line-height:1.5;
+padding:5px 20px;
+}
+
+div.confirmation {
+background-color:#f4f8e4;
+color:#729d00;
+font-weight:bold;
+}
+
+.error {
+background:#fcc;
+}
+
+
+/* action buttons */
+
+button, 
+a.checkout  {
+background:#f90;
+border:0;
+color:#333;
+padding:0 1em;
+text-align:center;
+text-decoration:none;
+-moz-border-radius:3px;
+}
+
+#center button,
+a.checkout  {
+height:2.5em;
+}
+
+a.admin {
+border:1px solid #ccc;
+color:#333;
+line-height:2em;
+height:2em;
+}
+
+#center a.admin {
+background: #EDF2F9 url('<?php echo $html->url('/img/icons/add.gif'); ?>') 0.2em 0.5em no-repeat;
+padding:0.5em 1em 0.5em 2em;
+margin-right:1em;
+width:10em;
+}
+
+#center a.edit.admin {
+background-image: url('<?php echo $html->url('/img/icons/pencil.gif'); ?>');
+}
+
+
+/* header admin link */
+
+a.admin.show {
+position: fixed;
+left: 45%;
+top: 0;
+padding: 0 2em;
+text-decoration: none;
+width:5%;
+display:block;
+background-color: #EDF2F9;
+z-index:1;
+border-top:0;
+}
+
+
+pre {
+text-align:left;
+font-size:1.4em;
+}
+
+
+/* total */
+
+#total ul {
+list-style:none;
+}
+
+#total li#btotal {
+font-size:1.3em;
+font-weight:bold;
+padding-top:0.2em;
+margin-top:0.2em;
+border-top:1px solid #666;
+}
+
+#total button, 
+#total a {
+font-size:1.4em;
+font-weight:bold;
+margin-top:0.2em;
+display:block;
+}
+
+/* forms */
+
+fieldset {
+margin: .5em 0;
+border:0;
+}
+
+input[type="text"], 
+div.text input,  
+div.password input, 
+select,
+textarea {
+border:1px solid #ccc;
+border-color:#666 #ccc #ccc #666;
+}
+
+legend{
+font-weight:bold;
+padding:0;
+}
+
+input, 
+textarea {
+padding:2px 4px;
+}
+
+option {
+padding:2px 1em 2px 4px;
+}
+
+div.input{
+white-space:nowrap;
+vertical-align:middle;
+margin-bottom:1em;
+}
+
+div.input label{
+clear:both;
+display:block;
+}
+
+div.checkbox input {
+border: 0;
+}

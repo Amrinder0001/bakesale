@@ -1,0 +1,39 @@
+#center {
+margin:0;
+}
+
+#right{
+display:none;
+}
+
+#left {
+display:block;
+}
+
+table.cart {
+width:auto;
+margin:0;
+width:100%;
+}
+
+tfoot td.total {
+background:#eee;
+border:1px solid #ccc;
+border-width:0 1px 1px 0;
+padding:0.5em;
+}
+
+td.total ul {
+list-style:none;
+margin-bottom:1em;
+}
+td.total ul li {display:block!important}
+
+
+td.total a {
+display:block;
+width:50%;
+float:right;
+padding:0.5em;
+font-size:1.5em;
+}

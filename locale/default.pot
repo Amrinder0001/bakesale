@@ -1,0 +1,432 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  Revision: 514 \bakesale-dev\controllers\checkout_controller.php
+#  Revision: 516 \bakesale-dev\controllers\orders_controller.php
+#  Revision: 512 \bakesale-dev\controllers\pages_controller.php
+#  Revision: 515 \bakesale-dev\controllers\shopping_carts_controller.php
+#  Revision: 461 \bakesale-dev\plugins\payment\controllers\moneybookers_controller.php
+#  Revision: 492 \bakesale-dev\views\helpers\images.php
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2007-12-20 23:06-0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: \controllers\checkout_controller.php:53
+#: \views\checkout\index.thtml:1
+#: \views\elements\total.thtml:8
+#: \views\shopping_carts\minicart.thtml:15
+msgid "Checkout"
+msgstr ""
+
+#: \controllers\orders_controller.php:199
+msgid "Order confirmation"
+msgstr ""
+
+#: \controllers\pages_controller.php:73
+msgid "Search results for: %s"
+msgstr ""
+
+#: \controllers\shopping_carts_controller.php:63
+#: \views\shopping_carts\minicart.thtml:3
+#: \views\shopping_carts\show.thtml:1
+msgid "Shopping cart"
+msgstr ""
+
+#: \plugins\payment\controllers\moneybookers_controller.php:40
+#: \views\checkout\index.thtml:20
+#: \views\elements\email\text\order_confirmation.ctp:9
+#: \views\layouts\admin.thtml:11
+#: \views\orders\admin_edit.thtml:2
+msgid "Products"
+msgstr ""
+
+#: \views\brands\admin_delete.thtml:2
+msgid "Delete brand :"
+msgstr ""
+
+#: \views\brands\admin_delete.thtml:6
+msgid "Delete products ?"
+msgstr ""
+
+#: \views\brands\admin_delete.thtml:7
+#: \views\brands\admin_show.thtml:4
+#: \views\content_categories\admin_show.thtml:3
+#: \views\helpers\bs.php:43;43;210
+#: \views\helpers\images.php:153
+#: \views\pages\admin_delete.thtml:1;4
+#: \views\subproducts\admin_add.thtml:7;7
+msgid "Delete"
+msgstr ""
+
+#: \views\brands\admin_edit.thtml:6
+#: \views\categories\admin_edit.thtml:6
+#: \views\content_categories\admin_edit.thtml:9
+#: \views\contents\admin_edit.thtml:9
+#: \views\countries\admin_edit.thtml:9
+#: \views\orders\admin_edit.thtml:41;72
+#: \views\payment_methods\admin_edit.thtml:18
+#: \views\products\admin_edit.thtml:17;35;71
+#: \views\shipping_methods\admin_edit.thtml:14;25
+msgid "Save"
+msgstr ""
+
+#: \views\brands\admin_show.thtml:3
+#: \views\categories\admin_show.thtml:3
+#: \views\content_categories\admin_show.thtml:3
+msgid "Edit"
+msgstr ""
+
+#: \views\brands\admin_show.thtml:9
+#: \views\brands\show.thtml:5
+#: \views\categories\admin_show.thtml:9
+#: \views\categories\show.thtml:25
+#: \views\orders\admin_edit.thtml:27
+#: \views\shopping_carts\show.thtml:6
+msgid "No products"
+msgstr ""
+
+#: \views\categories\admin_show.thtml:4
+msgid "delete"
+msgstr ""
+
+#: \views\categories\admin_show.thtml:5
+#: \views\orders\admin_edit.thtml:31
+msgid "Add product"
+msgstr ""
+
+#: \views\checkout\index.thtml:6
+#: \views\elements\admin_settings_menu.thtml:4
+msgid "Payment methods"
+msgstr ""
+
+#: \views\checkout\index.thtml:13
+#: \views\shipping_methods\admin_edit.thtml:4
+msgid "Shipping method"
+msgstr ""
+
+#: \views\content_categories\admin_show.thtml:3
+msgid "Add content"
+msgstr ""
+
+#: \views\content_categories\admin_show.thtml:9
+msgid "No contents"
+msgstr ""
+
+#: \views\countries\admin_edit.thtml:7
+#: \views\countries\admin_index.thtml:8
+#: \views\elements\admin_settings_menu.thtml:3
+msgid "Shipping methods"
+msgstr ""
+
+#: \views\countries\admin_index.thtml:2
+msgid "Add country"
+msgstr ""
+
+#: \views\countries\admin_index.thtml:7
+#: \views\elements\admin_contents.thtml:4
+#: \views\elements\admin_products.thtml:4
+#: \views\orders\admin_edit.thtml:7
+#: \views\orders\admin_index.thtml:7
+#: \views\payment_methods\admin_index.thtml:7
+#: \views\products\admin_edit.thtml:42
+#: \views\shipping_methods\admin_index.thtml:7
+#: \views\subproducts\admin_index.thtml:5
+msgid "Name"
+msgstr ""
+
+#: \views\countries\admin_index.thtml:9
+#: \views\elements\admin_contents.thtml:5
+#: \views\elements\admin_products.thtml:6
+#: \views\payment_methods\admin_index.thtml:9
+#: \views\shipping_methods\admin_index.thtml:8
+msgid "Status"
+msgstr ""
+
+#: \views\countries\admin_index.thtml:10
+#: \views\elements\admin_contents.thtml:6
+#: \views\elements\admin_products.thtml:8
+#: \views\orders\admin_edit.thtml:11
+#: \views\orders\admin_index.thtml:10
+#: \views\payment_methods\admin_index.thtml:10
+#: \views\products\admin_edit.thtml:46
+#: \views\shipping_methods\admin_index.thtml:9
+#: \views\shipping_rules\admin_index.thtml:11
+#: \views\subproducts\admin_index.thtml:9
+msgid "Actions"
+msgstr ""
+
+#: \views\countries\admin_index.thtml:25
+msgid "No countries"
+msgstr ""
+
+#: \views\elements\address.thtml:2
+#: \views\elements\email\text\order_confirmation.ctp:26
+#: \views\orders\admin_edit.thtml:47
+msgid "Address"
+msgstr ""
+
+#: \views\elements\admin_contents_menu.thtml:11
+msgid "Add content category"
+msgstr ""
+
+#: \views\elements\admin_menu.thtml:4
+#: \views\products\admin_edit.thtml:14
+msgid "Categories"
+msgstr ""
+
+#: \views\elements\admin_menu.thtml:5
+msgid "Brands"
+msgstr ""
+
+#: \views\elements\admin_menu.thtml:11
+msgid "Add category"
+msgstr ""
+
+#: \views\elements\admin_menu.thtml:24
+msgid "Add brand"
+msgstr ""
+
+#: \views\elements\admin_products.thtml:5
+#: \views\elements\shopping_cart.thtml:7
+#: \views\orders\admin_edit.thtml:9
+#: \views\shipping_rules\admin_index.thtml:10
+msgid "Price"
+msgstr ""
+
+#: \views\elements\admin_products.thtml:7
+#: \views\products\admin_edit.thtml:6;29
+msgid "Subproducts"
+msgstr ""
+
+#: \views\elements\admin_settings_menu.thtml:5
+#: \views\shipping_methods\admin_edit.thtml:12
+msgid "Countries"
+msgstr ""
+
+#: \views\elements\admin_settings_menu.thtml:6
+msgid "States"
+msgstr ""
+
+#: \views\elements\shopping_cart.thtml:5
+#: \views\orders\admin_edit.thtml:8
+msgid "Quantity"
+msgstr ""
+
+#: \views\elements\shopping_cart.thtml:6
+#: \views\products\admin_edit.thtml:4
+msgid "Product"
+msgstr ""
+
+#: \views\elements\shopping_cart.thtml:8
+#: \views\elements\total.thtml:5
+#: \views\elements\email\text\order_confirmation.ctp:24
+#: \views\orders\admin_index.thtml:9
+#: \views\shopping_carts\minicart.thtml:13
+msgid "Total"
+msgstr ""
+
+#: \views\elements\shopping_cart.thtml:19
+msgid "Remove"
+msgstr ""
+
+#: \views\elements\shopping_cart.thtml:35
+msgid "Update"
+msgstr ""
+
+#: \views\elements\total.thtml:3
+#: \views\elements\email\text\order_confirmation.ctp:16
+#: \views\orders\admin_edit.thtml:10
+#: \views\shopping_carts\minicart.thtml:10
+msgid "Subtotal"
+msgstr ""
+
+#: \views\elements\total.thtml:4
+#: \views\shopping_carts\minicart.thtml:11
+msgid "Shipping"
+msgstr ""
+
+#: \views\elements\total.thtml:10
+msgid "Confirm order"
+msgstr ""
+
+#: \views\elements\email\text\order_confirmation.ctp:3
+msgid "Order number"
+msgstr ""
+
+#: \views\elements\email\text\order_confirmation.ctp:4
+msgid "Order date"
+msgstr ""
+
+#: \views\elements\email\text\order_confirmation.ctp:5
+msgid "Email"
+msgstr ""
+
+#: \views\elements\email\text\order_confirmation.ctp:6
+msgid "Phone"
+msgstr ""
+
+#: \views\elements\email\text\order_confirmation.ctp:21
+msgid "State tax"
+msgstr ""
+
+#: \views\helpers\bs.php:126
+msgid "Deactivate"
+msgstr ""
+
+#: \views\helpers\bs.php:128
+msgid "Activate"
+msgstr ""
+
+#: \views\helpers\bs.php:192
+msgid "Add image"
+msgstr ""
+
+#: \views\helpers\bs.php:207
+msgid "Larger image"
+msgstr ""
+
+#: \views\layouts\admin.thtml:3;3
+#: \views\layouts\shop.thtml:3;3
+msgid "en"
+msgstr ""
+
+#: \views\layouts\admin.thtml:5
+msgid "UTF-8"
+msgstr ""
+
+#: \views\layouts\admin.thtml:12
+#: \views\orders\admin_index.thtml:1
+msgid "Orders"
+msgstr ""
+
+#: \views\layouts\admin.thtml:13
+msgid "Contents"
+msgstr ""
+
+#: \views\layouts\admin.thtml:14
+msgid "Settings"
+msgstr ""
+
+#: \views\layouts\admin.thtml:15
+msgid "Shop"
+msgstr ""
+
+#: \views\layouts\shop.thtml:5
+msgid "iso-8859-1"
+msgstr ""
+
+#: \views\layouts\shop.thtml:10
+msgid "Admin"
+msgstr ""
+
+#: \views\layouts\shop.thtml:19;21
+msgid "Search"
+msgstr ""
+
+#: \views\order_products\admin_add.thtml:3
+msgid "Add product to order"
+msgstr ""
+
+#: \views\orders\admin_edit.thtml:1
+msgid "Edit order"
+msgstr ""
+
+#: \views\orders\admin_index.thtml:8
+msgid "Date"
+msgstr ""
+
+#: \views\orders\admin_index.thtml:33
+msgid "No orders"
+msgstr ""
+
+#: \views\orders\confirmation.thtml:1
+msgid "Order sent"
+msgstr ""
+
+#: \views\payment_methods\admin_edit.thtml:8
+msgid "Processor"
+msgstr ""
+
+#: \views\payment_methods\admin_index.thtml:2
+msgid "Add payment method"
+msgstr ""
+
+#: \views\payment_methods\admin_index.thtml:8
+msgid "Proseccor"
+msgstr ""
+
+#: \views\payment_methods\admin_index.thtml:25
+msgid "No payment methods"
+msgstr ""
+
+#: \views\products\admin_edit.thtml:5
+msgid "Images"
+msgstr ""
+
+#: \views\products\admin_edit.thtml:7;65
+msgid "Special"
+msgstr ""
+
+#: \views\products\admin_edit.thtml:41
+#: \views\subproducts\admin_index.thtml:4
+msgid "Sort"
+msgstr ""
+
+#: \views\products\admin_edit.thtml:43
+#: \views\subproducts\admin_index.thtml:6
+msgid "Price change"
+msgstr ""
+
+#: \views\products\admin_edit.thtml:44
+#: \views\subproducts\admin_index.thtml:7
+msgid "Weight change"
+msgstr ""
+
+#: \views\products\admin_edit.thtml:45
+#: \views\subproducts\admin_index.thtml:8
+msgid "Stock"
+msgstr ""
+
+#: \views\products\show.thtml:13
+msgid "Add to cart"
+msgstr ""
+
+#: \views\products\show.thtml:23
+msgid "Other %s products"
+msgstr ""
+
+#: \views\shipping_methods\admin_edit.thtml:5
+#: \views\shipping_rules\admin_index.thtml:2
+msgid "Shipping rules"
+msgstr ""
+
+#: \views\shipping_methods\admin_index.thtml:2
+msgid "Add shipping method"
+msgstr ""
+
+#: \views\shipping_methods\admin_index.thtml:23
+msgid "No shipping methods"
+msgstr ""
+
+#: \views\shipping_rules\admin_index.thtml:7
+msgid "Type"
+msgstr ""
+
+#: \views\shipping_rules\admin_index.thtml:8
+msgid "Min"
+msgstr ""
+
+#: \views\shipping_rules\admin_index.thtml:9
+msgid "Max"
+msgstr ""
+

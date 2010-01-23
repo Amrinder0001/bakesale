@@ -1,0 +1,15 @@
+
+Images are not showing
+--------------------------------------
+
+Make sure dirctories these directories are all writable:
+
+/app/webroot/img/cache/
+/app/webroot/img/temp/
+/app/webroot/img/uploads/
+
+
+Warning: __loadbootstrap(config/bootstrap.php) [function.--loadbootstrap]: failed to open stream: No such file or directory in /your_installation_root/cake/libs/configure.php on line 340
+--------------------------------------
+
+You are missing CakePHP files on your app directory. It is possible you have missed uploading these files or they have been overwritten (usually an mac problem).

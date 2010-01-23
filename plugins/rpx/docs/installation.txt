@@ -1,0 +1,13 @@
+
+
+1. Drop files to /app/plugins/ directory
+2. add to your layout.ctp file 
+
+##After:
+
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo Configure::read('App.encoding'); ?>" />
+
+
+##Add:
+
+<link rel="alternate" href="/piclens/" type="application/rss+xml" />

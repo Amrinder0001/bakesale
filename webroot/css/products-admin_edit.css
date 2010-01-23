@@ -1,0 +1,216 @@
+/*
+ css/products-admin_edit.css
+*/
+
+
+/* general styling */
+
+div#content {
+max-width:1000px;
+margin:auto;
+}
+
+div.combined {
+padding:2em;
+background:#eee;
+margin:0 20px 20px 0;
+border:1px solid #ccc;
+-moz-border-radius:5px;
+}
+
+button, input[type=submit] {
+-moz-border-radius:5px;
+}
+
+form,
+body.c-products h2,
+div.page-header-contents{
+margin:auto;
+float:none;
+}
+
+h2 {
+font-size:1.2em;
+font-weight:bold;
+text-shadow:0 0 0 1px red;
+}
+
+fieldset {
+width:100%;
+}
+
+div.combined:after,
+form:after,
+div#Image ul:after {
+content: "."; 
+clear: both; 
+display: block; 
+height: 0; 
+visibility: hidden;
+}
+
+/* page header */
+
+body.c-products h1 {
+line-height:1.5;
+width:100%;
+}
+
+/* base information */
+
+div#Product form {
+margin:-2em;
+padding:0 2em;
+border-right:17em solid #eee;
+}
+
+div#Product fieldset {
+float:left;
+max-width:600px;
+clear:none;
+padding:0;
+}
+
+#Product fieldset.numeric {
+width:12.8em;
+float:right;
+margin-right:-18.1em;
+margin-top:-28.1em;
+padding:2em;
+}
+
+
+
+/* images */
+
+#Image ul {
+list-style: none;
+margin: 0;
+padding: 2em 0 1em 0;
+text-align:center;
+}
+
+#Image li {
+background:#FFFFFF none repeat scroll 0 0;
+border:1px solid #CCCCCC;
+color:#CCCCCC;
+float:left;
+height:170px;
+margin:1em;
+padding:10px;
+text-align:center;
+width:170px;
+-moz-box-shadow:0 0 10px #ccc;
+}
+
+div.error {
+background:#fcc;
+border:1px solid red;
+margin: 2em 23%;
+padding: 1%;
+display:block;
+width:50%;
+float:left;
+}
+
+#Image img {
+display:block;
+margin:5px auto;
+}
+
+div#Image a {
+display:block;
+width:50%;
+margin: 0 auto 0.5em auto;
+}
+
+
+
+/* subproduct */
+
+form#SubproductAdminEditForm {
+float:none;
+clear:both;
+margin:1em;
+width:auto;
+border:1px solid #bbb;
+background:#eee;
+}
+
+form#SubproductAdminEditForm fieldset {
+padding:0;
+padding-left:2em;
+float:left;
+width:auto;
+margin:0;
+}
+
+form#SubproductAdminEditForm div.submit{
+padding-top:2.3em;
+float:left;
+clear:none;
+}
+
+#SubproductAdminEditForm div{
+float:left;
+padding:4px;
+}
+
+#SubproductAdminEditForm input {
+margin-bottom:1em;
+}
+
+#SubproductAdminEditForm legend {
+display:none;
+}
+
+#SubproductAdminEditForm input.name {
+width:20em;
+}
+
+#SubproductUpdateMultipleForm div.buttons{
+clear:none;
+margin-left:1em;
+}
+
+#Subproduct table {
+margin-top:0;
+background:#fff;
+}
+
+#Subproduct input {
+float:left;
+width:4em;
+}
+
+#Subproducts table td.name {
+width:12em;
+}
+
+td.price, 
+td.quantity, 
+td.weight {
+text-align:center;
+}
+
+td.r { 
+width:3em;
+}
+
+table tr.latest td {
+background:blue;
+}
+
+table label {
+position:absolute;
+top:-10000px;
+}
+
+table tr td {
+border:0;
+}
+
+div.page-header form{
+display:none;
+}
+
