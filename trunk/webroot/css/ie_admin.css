@@ -1,0 +1,95 @@
+* html #sbar {
+position:absolute;
+z-index:2000;
+left:0;
+margin:0;
+}
+
+* html fieldset#CategoryCategory,
+* html form#SubproductAddForm,
+* html div#Image form,
+* html #wrapper {
+position:absolute;
+z-index:2000;
+right:0;
+margin:0;
+padding-bottom:0;
+}
+
+* html #wrapper {
+left:0;
+}
+
+* html #sbar,
+* html #content,
+* html #nonFooter  {
+overflow:visible;
+}
+
+* html #nonFooter  {
+overflow:auto;
+}
+
+* html #nonFooter {
+height: 100%;
+}
+
+* html fieldset {
+width:auto;
+}
+
+body.c-orders.a-admin-index form,
+ul.tabs,
+#footer,
+div.combined,
+div.page-header {
+zoom:1;
+}
+
+
+#brands li a, .settings li a {
+display:inline-block;
+}
+
+#brands li a, .settings li a {
+display:block;
+}
+
+body.col2l #sbar {
+margin-left: 0;
+}
+
+body.col2l #wrapper {
+padding-left: 0;
+}
+
+body.col2r #wrapper {
+border-right:22em solid #eee;
+}
+
+div.header,
+#wrapper, {
+zoom:1;
+}
+
+div.header ul li {
+display: inline;
+}
+
+table {
+border-collapse: collapse;
+}
+
+.checkbox,
+.radio {
+width: auto;
+border: 0;
+}
+
+#brands li a, #settings li a {
+display:inline-block;
+}
+
+#brands li a, #settings li a  {
+display:block;
+}

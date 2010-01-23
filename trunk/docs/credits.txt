@@ -1,0 +1,14 @@
+CakePHP
+http://cakephp.org/
+
+
+Jquery
+http://jquery.com/
+
+
+Markdown
+http://michelf.com/projects/php-markdown/
+
+
+famfamfam silk icon set
+http://www.famfamfam.com/lab/icons/

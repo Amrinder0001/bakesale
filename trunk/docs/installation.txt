@@ -1,0 +1,60 @@
+Online installation with CakePHP [Recommended]
+--------------------------------------------------------------------------
+
+Dependencies
+-------------------------------------
+None, a compatible cakePHP release is bundled in this package
+
+
+Quick Start
+-------------------------------------
+
+* Unzip and upload the entire contents of the zip in a folder of your liking on your website
+* Go to http://yourdomain.com/path_to_your_bakesale_install/installer/installer/ and follow the instructions on screen
+
+
+Post Install Configuration
+-------------------------------------
+Be sure to login to admin and add your country, shipping method and payment method.
+
+
+
+
+Manual Installation (for advanced users only)
+--------------------------------------------------------------------------
+
+Dependencies
+-------------------------------------
+a compatible cakePHP release
+
+
+* Copy files to your WWW root
+* Rename app/config/database.php.default to database.php and add your database server settings. Remember that the table prefix needs to be bs_
+* Rename app/config/base_config.php to bakesale_config.php and move it to app/config/custom/.
+* Run app/sql/bakesale.sql to create the database (with PHPMyAdmin or similar)
+* Run app/sql/essentials.sql to add essential content (page text and country) to database
+
+
+Optional
+-------------------------------------
+
+Follow these steps if you want to use demoproducts
+
+* Run app/sql/demo_products.sql to populate database with demoproducts
+* Copy files from app/docs/uploads/ to app/webroot/img/uploads/
+
+
+Logging in
+-------------------------------------
+Go to www.yoursite.com/login/
+
+username: admin
+password: demo
+
+
+Going live
+-------------------------------------
+
+Remember to change in bakesale_config.php password before publishing your store.
+
+All payment modules are installed with test info. Be sure to change these.

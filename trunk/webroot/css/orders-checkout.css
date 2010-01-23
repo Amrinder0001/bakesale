@@ -1,0 +1,209 @@
+/* layout */
+
+body.a-checkout #centerwrap{
+width:100%;
+}
+
+div#center {
+margin:0;
+background:#fff;
+}
+
+
+fieldset#billing legend,
+fieldset#shipping legend {
+font-size:1.5em;
+margin-bottom:1em
+}
+
+/* address form */
+
+#form-wrapper {
+background-color:#fff;
+padding:1em;
+padding-right: 0;
+clear:both;
+margin-top:1em
+}
+
+#form-wrapper legend {
+color: #444;
+}
+
+form#OrderCheckoutForm {
+clear:both;
+width:100%
+}
+
+div#form-wrapper:after,
+div.handling:after,
+div.handling-item:after {
+content: "."; 
+display: block; 
+height: 0;
+clear: both; 
+visibility: hidden;
+}
+
+/* address */
+
+div#center fieldset {
+float:left;
+width:50%;
+padding:0;
+}
+
+div.input {
+margin-bottom:0.3em;
+}
+
+div.input.text, 
+div.input.select {
+line-height:1em;
+}
+
+div.input.text label,
+div.input.select label {
+width:8.5em;
+float:left;
+text-align:right;
+padding-right:0.5em;
+padding-top:0.3em;
+}
+
+div.input input,
+div.input select {
+margin-bottom:0.5em;
+border:1px solid #ccc;
+}
+
+fieldset#billing div.input input,
+fieldset#billing div.input select,
+fieldset#shipping div.input input,
+fieldset#shipping div.input select {
+margin-bottom:0.5em;
+border:1px solid #ccc;
+width:170px
+}
+
+/* shipping and payment */
+
+fieldset.handling label {
+display:inline;
+}
+
+div.handling {
+width: 270px;
+border: #CCC solid 1px;
+padding: 5px 12px 0;
+margin-right: 3.6em;
+float: right;
+}
+
+*+html div.handling {
+padding-bottom: 10px;
+}
+
+* html div.handling {
+padding-bottom: 10px;
+}
+
+div.active {
+background:#ffe;
+}
+
+div#center div.handling fieldset {
+float:left;
+width:49%;
+}
+
+div#center div.handling legend {
+margin-bottom: 3px;
+}
+
+div.handling-item {
+line-height:2em;
+clear:both;
+padding-left:0.2em;
+}
+
+div.handling-item input {
+margin-top:0.3em;
+float:left;
+}
+
+div.handling-item label{
+float:left;
+margin-top:0em;
+padding-left:5px;
+}
+
+/* checkout form */
+
+form#OrderCheckoutForm fieldset {
+margin-bottom:2em;
+}
+
+fieldset#Comments {
+width:200%;
+clear:both;
+font-size:1.5em;
+}
+
+fieldset#Comments textarea {
+width:200%;
+height:6em;
+font-size: 11px;
+padding: 5px;
+font-family: "Tahoma";
+border: #CCC solid 1px;
+}
+
+/* total */
+
+#total {
+background:#d8d8d8;
+width:22em;
+padding:1em;
+float:right;
+line-height: 16px;
+margin: 3em 3.6em 3em 9em;
+width:275px;
+}
+
+#total ul {
+clear:both;
+text-align:right;
+}
+#total ul li {
+display:block
+}
+
+/* errors */
+
+#error-report {
+background:#fcc;
+margin:0;
+}
+
+div.error span.text {
+clear:both;
+display:block;
+margin-left:9em;
+line-height:1;
+}
+
+div.error label {
+width:8em;
+}
+
+div.error {
+font-weight:bold;
+padding:0.5em;
+}
+
+#same-address {
+margin-bottom:1em;
+padding-left:9em;
+}
+#same-address label{margin-left:0.5em;vertical-align:top}
