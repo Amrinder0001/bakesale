@@ -60,6 +60,9 @@ msgstr "Lisää sivu"
 msgid "Edit content"
 msgstr "Muokkaa sivua" 
 
+msgid "Save content"
+msgstr "Tallenna sivu" 
+
 
 #: Content categories
 
@@ -71,6 +74,9 @@ msgstr "Lisää sivukategoria"
 
 msgid "Edit content category"
 msgstr "Muokkaa sivukategoriaa" 
+
+msgid "Save content category"
+msgstr "Tallenna sivukategoria" 
 
 
 #: Country
@@ -86,6 +92,9 @@ msgstr "Lisää maa"
 
 msgid "Edit country"
 msgstr "Muokkaa maata" 
+
+msgid "Save country"
+msgstr "Tallenna maa" 
 
 
 #: Images
@@ -117,6 +126,9 @@ msgstr "Lisää tuote"
 msgid "Edit product"
 msgstr "Muokkaa tuotetta"
 
+msgid "Save product"
+msgstr "Tallenna tuote"
+
 msgid "No products"
 msgstr "Ei tuotteita"
 
@@ -144,6 +156,9 @@ msgstr "Lisää merkki"
 msgid "Edit brand"
 msgstr "Muokkaa merkki"
 
+msgid "Save brand"
+msgstr "Tallenna merkki"
+
 msgid "Other %s products"
 msgstr "Muut %s tuotteet"
 
@@ -158,6 +173,9 @@ msgstr "Lisää kategoria"
 
 msgid "Edit category"
 msgstr "Muokkaa kategoriaa"
+
+msgid "Save category"
+msgstr "Tallenna kategoria"
 
 
 #: Search
