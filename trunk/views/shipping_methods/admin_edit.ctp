@@ -1,4 +1,9 @@
-<?php $this->appendExternalJs('/js/shared/jquery.form.js'); ?>
+<?php 
+$this->appendExternalJs('/js/shared/jquery.form.js');
+$this->appendExternalCss('/css/shipping-methods.admin-edit.css');
+$this->appendExternalJs('/js/jquery.asmselect.js');
+$this->appendExternalCss('/css/jquery.asmselect.css');
+?>
 
 <?php echo $bs->pageHeader(); ?>
 <div class="combined" id="ShippingMethod">
@@ -7,12 +12,9 @@ echo $form->create('ShippingMethod');
 echo $form->inputs(array(
 'legend' => __('Shipping method', true),
 'id', 'active', 'name', 'price', 'sort'));
+echo $form->inputs(array('fieldset'=>'countries', 'Country.Country'));
+echo $form->end('Save'); 
 ?>
-<fieldset>
-<legend><?php __('Countries')?></legend>
-<?php echo $form->input('Country.Country', array('multiple' => 'checkbox')); ?>
-</fieldset>
-<?php echo $form->end('Save'); ?>
 </div>
 
 <div class="combined" id="ShippingRule">
@@ -27,18 +29,20 @@ echo $form->end('Save');
 ?>
 <?php echo $form->Create('ShippingRule', array('action' => 'update_multiple'));  ?>
 <table cellspacing="0">
+	<thead>
   <tr>
     <th><?php __('Type'); ?></th>
     <th><?php __('Min'); ?></th>
     <th><?php __('Max'); ?></th>
     <th><?php __('Price'); ?></th>
-    <th><?php __('Actions'); ?></th>
+    <th><?php __('Delete'); ?></th>
   </tr>
+  </thead>
   <tbody>
 <?php if(!empty($this->data['ShippingRule'])) { ?>
     <?php foreach($this->data['ShippingRule'] as $key => $row) { ?>
     <tr>
-      <td><?php echo $form->input($key . '.id', array('value' => $row['id'])); ?>
+      <td>
 	  <?php echo $form->input('type', array('div' => false))?> </td>
       <?php $fields = array('min', 'max', 'price');?>
       <?php foreach($fields as $row2) {?>
@@ -46,8 +50,7 @@ echo $form->end('Save');
 	  <?php echo $form->input($key . '.' . $row2, array('value' => $row[$row2], 'div' => false))?>
 	  </td>
       <?php } ?>
-       <td class="actions"><?php echo $form->checkbox('ShippingRule.' . $key . '.delete'); ?></td>
-    </tr>
+ <td class="actions"><?php echo $html->link(__('Delete', true), array('controller' => 'shipping_rules', 'action' => 'delete', $row['id']), array('class' => 'delete')); ?><?php echo $form->input($key . '.id', array('value' => $row['id'])); ?></td>    </tr>
     <?php } ?>
 <?php } ?>
 </table>

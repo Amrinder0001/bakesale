@@ -1,10 +1,16 @@
 <?php
-$this->appendExternalJs('/js/shared/jquery.asmselect.js');
-$this->appendExternalJs('/js/shared/jquery.ocupload-1.1.2.packed.js');
-$this->appendExternalJs('/js/shared/jquery.form.js');
+$javascript->link(array(
+	'shared/jquery.asmselect',
+	'shared/jquery.form',
+	'shared/jquery.ocupload-1.1.2.packed',
+	'products/admin-edit',
+
+), false);
 $this->appendExternalCss('/css/jquery.asmselect.css');
+$this->appendExternalCss('/css/products/admin-edit.css');
+
 ?>
-<div class="combined cbb" id="Product">
+<div class="combined" id="product">
 <div class="page-header">
 <?php echo $bs->pageHeader(true);?>
 </div>
@@ -13,14 +19,14 @@ echo $form->create('Product');
 echo $form->inputs(array('id', 'name', 'description')); 
 echo $form->inputs(array('fieldset'=>'categories', 'Category.Category', 'brand_id' => array('empty' => true)));
 echo $form->inputs(array('fieldset'=>'numeric', 'active', 'cart', 'price', 'special_price', 'weight', 'quantity'));
-echo $form->end('Save'); 
+echo $form->end(__('Save product', true)); 
 ?>
 </div>
   
   
   
   
-  <div class="combined cbb" id="Image">
+  <div class="combined" id="images">
   	<h2><?php __('Images'); ?></h2>
     <?php 
 	echo $bs->imageUpload($this->data['Product']['id']);    
@@ -30,10 +36,10 @@ echo $form->end('Save');
  
  
  
-  <div class="combined cbb" id="Subproduct"> 
+  <div class="combined" id="subproducts"> 
   <h2><?php __('Subproducts'); ?></h2>
   <?php 
-		echo $form->create('Subproduct', array('action' => 'add')); 
+		echo $form->create('Subproduct', array('action' => 'add', 'class' => 'instant')); 
 		echo $form->inputs(array(
 			'legend' => __('Add subproduct', true), 
 			'product_id' => array('value' => $this->data['Product']['id'], 'type' => 'hidden'), 
@@ -44,15 +50,15 @@ echo $form->end('Save');
 		echo $form->end('Add subproduct');
 	?>
     <?php echo $form->Create('Subproduct', array('action' => 'update_multiple'));  ?>
-    <table cellspacing="0" id="subproducts">
+    <table>
     <thead>
       <tr>
         <th><?php __('Sort'); ?></th>
-        <th class="c1"><?php __('Name'); ?></th>
-        <th class="c1"><?php __('Price'); ?></th>
+        <th><?php __('Name'); ?></th>
+        <th><?php __('Price'); ?></th>
         <th><?php __('Weight'); ?></th>
         <th><?php __('Stock'); ?></th>
-        <th class="c1"><?php __('Delete'); ?></th>
+        <th><?php __('Delete'); ?></th>
       </tr>
       </thead>
       <tbody>
@@ -70,5 +76,5 @@ echo $form->end('Save');
         <?php } ?>
         </tbody>
     </table>
-<?php echo $form->end('Update'); ?>
+<?php echo $form->end(__('Update subproducts', true)); ?>
   </div>

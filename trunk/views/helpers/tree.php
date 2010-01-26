@@ -35,9 +35,7 @@ class TreeHelper extends Helper {
 		$complex = '<fieldset id="' . $fieldName . '" class="habtm">';
 		$complex .= '<legend>' . $legend . '</legend>';
 		foreach ($data as $key => $row) {
-		//$complex .= $this->checkboxMultiple($fieldName, $data, $selected);
 			$this->_generate_input($data, $modelName, $fieldName, $selected);
-			//debug($data[$key]);
 		}
 		$complex .= '</fieldset>';
 		return $complex;

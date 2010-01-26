@@ -1,5 +1,4 @@
 <?php 
-$this->prependExternalCss('/css/full-index.css');
 echo $bs->pageHeader(); 
 echo $this->element('alphabet_pagination', compact('firstLetters'));
 if(!empty($this->data)) {

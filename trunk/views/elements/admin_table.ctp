@@ -1,4 +1,7 @@
 <?php
+if(!isset($editForm)) {
+	$editForm = false;
+}
 if(!isset($data)) {
 	$data = $this->data;
 } else {
@@ -9,18 +12,21 @@ $price = array('products', 'line_items');
 $quantity = array('products', 'line_items');
 
 	if(!isset($model)) {
-    $model = false;
-    $controller = $this->params['controller'];
+		$model = false;
+    	$controller = $this->params['controller'];
 	} else {
-    if($model !== true) {
-    } else {
-    	$model = $this->params['models'][0];
-    }
-    $controller = Inflector::tableize($model);
+    	if($model !== true) {
+    	} else {
+    		$model = $this->params['models'][0];
+    	}
+    	$controller = Inflector::tableize($model);
 	}
 if(!empty($this->data)) {
-	echo $form->create($model, array('action' => 'update_multiple')); 
+	if($editForm) {
+		echo $form->create($model, array('action' => 'update_multiple')); 
+	}
 ?>
+<div class="clearfix"></div>
 <table cellspacing="0" id="<?php echo $controller; ?>">
     <thead>
         <tr>
@@ -58,7 +64,7 @@ if(!empty($this->data)) {
     
     foreach ($data as $key => $row) { 
     	if(!isset($row['id'])) {
-        $row = $row[$model];
+        	$row = $row[$model];
     	}
     ?>
         <tr id="<?php echo $bs->rowId($row, $model);?>">
@@ -97,14 +103,16 @@ if(!empty($this->data)) {
             <td class="active"><?php echo $bs->activateLink($row, $model);?></td>
         	<?php } ?>
             <td class="actions">
-            <?php echo $form->checkbox($model . '.' . $key . '.delete'); ?>
+                        <?php echo $bs->deleteLink($row); ?>
+
+            <?php /* echo $form->checkbox($model . '.' . $key . '.delete'); */?>
             </td>
         </tr>
         <?php } ?>
     </tbody>
 </table>
 <?php
-	if($form) {
+	if($editForm) {
     	echo $form->end('Update');
 	}
 ?>

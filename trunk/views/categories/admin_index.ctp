@@ -1,6 +1,5 @@
 <?php 
-$this->appendExternalJs('/js/silverstripe.tree.js');
+$javascript->link('silverstripe.tree', false);
 $this->setBodyCssClass('with-sidebar');
 $this->sidebar = 'admin_menu';
-
 ?>

@@ -31,5 +31,6 @@ if(isset($this->sidebar)) {
 	debug($this->params);	
 ?>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<?php echo $scripts_for_layout ?>
 <?php echo $this->getJs(); ?>
 </body></html>
