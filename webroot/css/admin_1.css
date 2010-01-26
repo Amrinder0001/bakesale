@@ -669,6 +669,53 @@ ul.dates li input {
 width:2em;
 }
 
+/* inline form */
+
+form.instant {
+float:none;
+clear:both;
+margin:1em;
+border:1px solid #bbb;
+background:#eee;
+display:block;
+}
+
+form.instant fieldset {
+padding:0;
+padding-left:2em;
+float:left;
+width:auto;
+margin:0;
+}
+
+form.instant div.submit {
+padding-top:2.3em;
+float:left;
+clear:none;
+}
+
+form.instant div{
+float:left;
+padding:4px;
+}
+
+form.instant input {
+margin-bottom:1em;
+}
+
+form.instant legend {
+display:none;
+}
+
+form.instant input.name {
+width:20em;
+}
+
+form.instant div.buttons{
+clear:none;
+margin-left:1em;
+}
+
 
 /* superfish menu*/
 
