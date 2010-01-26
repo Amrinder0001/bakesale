@@ -2,10 +2,9 @@ body.a-admin-index #wrapper {
 border:0;
 }
 
-table.products a img {
-float:left;
-margin-right:1em;
-border:1px solid #eee;
+table input {
+display:block;
+margin:auto;
 }
 
 <?php require_once(WWW_ROOT . 'css/silverstripe.tree.css); ?>

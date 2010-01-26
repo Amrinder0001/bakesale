@@ -1,7 +1,3 @@
-/*
- css/products-admin_edit.css
-*/
-
 
 /* general styling */
 
@@ -41,7 +37,7 @@ width:100%;
 
 div.combined:after,
 form:after,
-div#Image ul:after {
+div#image ul:after {
 content: "."; 
 clear: both; 
 display: block; 
@@ -58,20 +54,20 @@ width:100%;
 
 /* base information */
 
-div#Product form {
+div#product form {
 margin:-2em;
 padding:0 2em;
 border-right:17em solid #eee;
 }
 
-div#Product fieldset {
+div#product fieldset {
 float:left;
 max-width:600px;
 clear:none;
 padding:0;
 }
 
-#Product fieldset.numeric {
+#product fieldset.numeric {
 width:12.8em;
 float:right;
 margin-right:-18.1em;
@@ -83,14 +79,19 @@ padding:2em;
 
 /* images */
 
-#Image ul {
+
+#images button {
+width:10em;
+}
+
+#images ul {
 list-style: none;
 margin: 0;
 padding: 2em 0 1em 0;
 text-align:center;
 }
 
-#Image li {
+#images li {
 background:#FFFFFF none repeat scroll 0 0;
 border:1px solid #CCCCCC;
 color:#CCCCCC;
@@ -113,17 +114,19 @@ width:50%;
 float:left;
 }
 
-#Image img {
-display:block;
-margin:5px auto;
-}
-
-div#Image a {
+div#images a {
 display:block;
 width:50%;
 margin: 0 auto 0.5em auto;
 }
 
+span.height-fix {
+float:none;
+height:100px;
+width:100px;
+margin:auto;
+border:0;
+}
 
 
 /* subproduct */
@@ -173,17 +176,17 @@ clear:none;
 margin-left:1em;
 }
 
-#Subproduct table {
+#subproducts table {
 margin-top:0;
 background:#fff;
 }
 
-#Subproduct input {
+#subproducts input {
 float:left;
 width:4em;
 }
 
-#Subproducts table td.name {
+#subproducts table td.name {
 width:12em;
 }
 
@@ -195,10 +198,6 @@ text-align:center;
 
 td.r { 
 width:3em;
-}
-
-table tr.latest td {
-background:blue;
 }
 
 table label {
@@ -213,4 +212,3 @@ border:0;
 div.page-header form{
 display:none;
 }
-
