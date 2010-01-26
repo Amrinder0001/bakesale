@@ -8,8 +8,8 @@
 
 class AppController extends Controller {
 
-	public $components = array('RequestHandler', 'Session', 'Auth', 'Config');
-	public $helpers = array('Cache', 'Seo', 'Description', 'Price', 'Bs', 'Bsform', 'Tree', 'Images', 'Hcard');
+	public $components = array('RequestHandler', 'Session', 'Config');
+	public $helpers = array('Cache', 'Seo', 'Description', 'Price', 'Bs', 'Bsform', 'Tree', 'Images', 'Hcard', 'adminTable');
 	public $view = 'BsTheme';
    // public $persistModel = true;  
 
@@ -20,7 +20,7 @@ class AppController extends Controller {
 	public function beforeFilter() {
 		if($this->Config->setConfiguration()) {
 			$this->theme = Configure::read('Site.theme');
-			$this->setAuthorization();
+			$this->checkAuthorization();
 			$this->setOrderConfigValues();
 			if (!isset($this->params['requested'])) {
 				$this->_setDefaults();
@@ -38,23 +38,10 @@ class AppController extends Controller {
 /**
  *
  */
-	private function setAuthorization(){
-		$this->Auth->logoutRedirect = '/';
-		$this->Auth->autoRedirect = false;
-		$this->Auth->userScope = array('User.active' => 1);
-        $this->set('Auth',$this->Auth->user());
-		if($this->isAuthorized()) {
-			$this->Auth->allow('*');
-		} 
-    }
-
-/**
- *
- */
-	public function isAuthorized(){
+	public function checkAuthorization(){
 		if (isset($this->params["admin"])) {
 			if(!$this->isAdmin()) {
-				//return false;
+				return false;
 			}
 		}
 		return true;
@@ -65,13 +52,10 @@ class AppController extends Controller {
  *
  */
 	public function isAdmin(){
-		if(!$this->Session->check('UserCategory')) {
-			return false;
+		if($this->Session->check('admin') == 1) {
+			return true;
 		}
-		if(!in_array(1, $this->Session->read('UserCategory'))) {
-			return false;
-		}
-		return true;
+		return false;
     }
 
 /**
@@ -82,7 +66,7 @@ class AppController extends Controller {
 		$sessionValuesArray = array('id', 'shipping_method_id', 'payment_method_id', 'country_id', 's_country_id', 'session');
 		foreach($sessionValuesArray as $row) {
 			if($this->Session->check('Order.' . $row)) {
-				//Configure::write('Order.' . $row, $this->Session->read('Order.' . $row)); 
+				Configure::write('Order.' . $row, $this->Session->read('Order.' . $row)); 
 			}
 		}
     }
