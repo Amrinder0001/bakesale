@@ -133,7 +133,9 @@ $(document).ready(function() {
 		});
 		$("td.sort").contents().remove();
 	}
-
+	
+	 $("div.header ul.menu li").parents('li').addClass('indicator');
+/*
     $("div.header ul.menu").supersubs({ 
             minWidth:    12,   // minimum width of sub-menus in em units 
             maxWidth:    20,   // maximum width of sub-menus in em units 
@@ -145,7 +147,7 @@ $(document).ready(function() {
             speed:       'fast'                         
 		});  // call supersubs first, then superfish, so that subs are 
             // not display:none when measuring. 
- 
+ */
 	$('tbody').each(function(){
     	$(this).html($.trim($(this).html()));
   	});
