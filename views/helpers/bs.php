@@ -64,13 +64,11 @@ class BsHelper extends Helper {
 /**
  * set id
  */
-	private function _setId($data) {
-		if(isset($data[$this->model]['id'])) {
-			$id = $data[$this->model]['id'];
-		} else {
-			$id = $data['id'];
+	private function _setId($data = false) {
+		if(!$data) {
+			$data = $this->data;
 		}
-		return $this->id = $id;
+		return $this->id = $data['id'];
 	}
 
 /**
@@ -103,7 +101,8 @@ class BsHelper extends Helper {
 
 	public function rowId($data, $model = false) {
 		$this->_setModel($model);
-		$this->_setId($data);
+		$this->_setData($data);
+		$this->_setId();
 		return strtolower($this->model) . '-' . $this->id;
 	}
 
@@ -142,7 +141,9 @@ class BsHelper extends Helper {
 		$this->_setModel($model);
 		$this->_setController();
 		$this->_setAction();
-    	return $this->_link($data);
+		$this->_setData($data);
+		$this->_setId();
+    	return $this->_link();
 	}
 
 
@@ -153,15 +154,14 @@ class BsHelper extends Helper {
 	public function deleteLink($data) {
 		$this->_setModel();
 		$this->_setController();
-		
-		if(isset($data[$this->model])) {
-			$data = $data[$this->model];
-		}
+		$this->_setId($data);
+		$this->_setData($data);
+		$this->_setAction('delete');
 	
-		if(!isset($data['name'])) {
-			$data['name'] = $data['id'];
+		if(!isset($this->data['name'])) {
+			$this->data['name'] = $this->data['id'];
 		}
-		$id = $data['id'];
+		$id = $this->id;
 		$action = 'delete';
 		$url = $this->Html->url(compact('controller', 'action', 'id'));
 		$form = $this->Form->create(array('url' => $url));
@@ -175,14 +175,10 @@ class BsHelper extends Helper {
  * 
  */
 
-	private function _link($data) {
-		if(isset($data[$this->model])) {
-			$data = $data[$this->model];
-		}
-		if(!$link) {
-			$link = Router::url(compact('controller', 'action', 'id'));
-		}
-		$linkText = $data['name'];
+	private function _link() {
+		$action = $this->action;
+		$link = Router::url(compact('controller', 'action', 'id'));
+		$linkText = $this->data['name'];
 		$linkClass = strtolower($this->model . ' ' . $this->action);
 		return '<a href="' . $link . '" class="' . $linkClass . '">' . $linkText . '</a>';
 	}
@@ -248,7 +244,7 @@ class BsHelper extends Helper {
 		$this->_setController();
 		$this->_setData($data);
 		$this->_setAction('toggle');
-		$this->_setId($this->data);
+		$this->_setId();
 		$alt =  __('Activate', true);
 		if($this->data['active'] == '1') {
 			$alt = __('Deactivate', true);
@@ -300,12 +296,12 @@ class BsHelper extends Helper {
 						$url = array(
 							'admin' => false,
 							'action'=>'show',
-							'id' => $this->data[$model]['id']
+							'id' => $this->data['id']
 						);
 					}
 					$viewLink = $this->Html->link(__('Shop view', true), $url);
 				}
-				$name = ' : ' . $this->data[$model]['name'];
+				$name = ' : ' . $this->data['name'];
 				$extra = $viewLink . ' ' . $deleteLink;
 			break;
 			case 'admin_delete':
@@ -316,9 +312,9 @@ class BsHelper extends Helper {
 		$text = $text = str_replace("_", " ", $text);
 		$text = __($prefix  . $text, true);
 		$content = '<h1' . $cssClass . '>' . $text . $name . '</h1>' . $extra;
-		if ($this->action == 'admin_edit') {
+		//if ($this->action == 'edit') {
 			$content = '<div class="page-header">' . $content . '</div>';
-		}
+		//}
 		return $content;
 	}
 

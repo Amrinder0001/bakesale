@@ -1,5 +1,7 @@
 <?php
-$this->appendExternalJs('/js/jquery.ocupload-1.1.2.packed.js');
+$javascript->link('shared/jquery.ocupload-1.1.2.packed', false);
+$this->appendExternalCss('/css/categories/admin-edit.css');
+
 ?>
 <?php echo $bs->pageHeader(true); ?>
 <div id="page-content">
@@ -9,7 +11,7 @@ echo $form->inputs(array('legend' => __('Category', true),
 	'id', 'active', 'name', 
 	'parent_id'  => array('empty' => true),
 	'sort', 'description'));
-echo $form->end('Save');	
+echo $form->end('Save category');	
 ?>
 <div id="CategoryImage">
 	<?php echo $images->mainImage($this->data['Category']);?>
