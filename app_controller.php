@@ -9,9 +9,8 @@
 class AppController extends Controller {
 
 	public $components = array('RequestHandler', 'Session', 'Config');
-	public $helpers = array('Cache', 'Seo', 'Description', 'Price', 'Bs', 'Bsform', 'Tree', 'Images', 'Hcard', 'adminTable');
+	public $helpers = array('Cache', 'Seo', 'Description', 'Price', 'Bs', 'Bsform', 'Tree', 'Images', 'Hcard', 'adminTable', 'Javascript');
 	public $view = 'BsTheme';
-   // public $persistModel = true;  
 
 /**
  * Load configuration file
