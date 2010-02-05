@@ -12,7 +12,56 @@ class FilesComponent extends Object
 	public $controller;
 	public $maxsize = 1000;
 	public $_allowedImageExtensions = array("jpg", "jpeg", "gif", "png");
+	private $_duplicateCount = 0;
+
+/**
+ * Get access to controller
+ */
+
+    public function startup(&$controller) {
+        $this->controller =& $controller;
+    }
+
+
+	private function _setFileName($fileName) {
+		$this->fileName = $fileName;
+	}	
+
+	private function _setUploadFolder() {
+		$this->uploadFolder = WWW_ROOT . IMAGES_UPLOAD_FOLDER . DS;
+	}	
 	
+	private function _setSeoFileName() {
+		$this->seoFileName = self::rewriteFileName($this->_getItemName());
+		$this->seoFileName = $this->seoFileName . '.' . $this->fileExtension;	
+		$this->_getFileNameCounter();
+	}	
+
+	private function _setFileExtension() {
+		$extension = $this->fileName;
+		if(strstr($this->fileName, '.')) {
+			$pieces = explode(".", $this->fileName);
+			$extension = $pieces[count($pieces) - 1];
+		}
+		$this->fileExtension = strtolower($extension);
+	}	
+
+	private function _setModel($model) {
+		$this->model = $this->controller->modelClass;	
+	}	
+
+	private function _setId($id) {
+		$this->id = $id;	
+	}	
+
+	private function _setField($field) {
+		$this->field = $field;	
+	}	
+	
+	private function _setType($type) {
+		$this->type = $type;	
+	}	
+
 /**
  * Save file to server
  *
@@ -55,11 +104,11 @@ class FilesComponent extends Object
  * @param $field
  */
 
-	private function _isValidFileType($fileName, $field) {
-		if($field != 'images') {
+	private function _isValidFileType() {
+		if($this->field != 'images') {
 			return true;
 		}
-		if (in_array($this->_getFileExtension($fileName), $this->_allowedImageExtensions)) {
+		if (in_array($this->fileExtension, $this->_allowedImageExtensions)) {
 			return true;
 		} 
 		return false;
@@ -76,28 +125,34 @@ class FilesComponent extends Object
  */
 
 	public function uploadSave($data, $id, $model, $field = 'images', $type = 'multiple') {
-		$itemName = $this->_getItemName($id, $model);
-		$fileName = $this->_getFileName($data['name'], $itemName);
+		$this->_setFileName($data['name']);
+		$this->_setFileExtension();
+		$this->_setModel($model);
+		$this->_setId($id);
+		$this->_setField($field);
+		$this->_setType($type);
+		$this->_setUploadFolder();
+		$this->_setSeoFileName();		
 		
-		if(!$this->_isValidFileType($fileName, $field)) { 
+		if(!$this->_isValidFileType()) { 
 			$image['error']	= 
-			sprintf(__('Wrong file format. You tried to upload file with type %s. Allowed filetypes are %s', true),  $this->_getFileExtension($fileName), implode(', ', $this->allowedImageExtensions));	
+			sprintf(__('Wrong file format. You tried to upload file with type %s. Allowed filetypes are %s', true),  $this->fileExtension, implode(', ', $this->_allowedImageExtensions));	
 			return $image;
 		}
 
-		if(!$this->saveAs('imageFile', $fileName, WWW_ROOT . IMAGES_UPLOAD_FOLDER)) {
+		if(!$this->saveAs('imageFile', $this->fileName, $this->uploadFolder)) {
 			$image['error']	= __('Error saving image');	
 			return $image;
 		}
 		
-		$size = $this->_isValidSize($fileName, WWW_ROOT . IMAGES_UPLOAD_FOLDER);
+		$size = $this->_isValidSize();
 		if($size) {
-			$this->_saveFileToDatabase($id, $fileName, $model, $field, $type);
-			$image['file'] = $fileName;
+			$this->_saveFileToDatabase();
+			$image['file'] = $this->fileName;
 		} else {
 			$image['error']	= __('Image too big.', true) . 
-			sprintf(__('Your size: %s, maximum %s', true), $this->getSize($fileName, WWW_ROOT . IMAGES_UPLOAD_FOLDER), $this->maxsize . ' x ' . $this->maxsize);
-			$this->delete($file, WWW_ROOT . IMAGES_UPLOAD_FOLDER . DS);
+			sprintf(__('Your size: %s, maximum %s', true), $this->getSize($fileName, $this->uploadFolder), $this->maxsize . ' x ' . $this->maxsize);
+			$this->delete($this->fileName, $this->uploadFolder);
 		}
 		return $image;
 	}
@@ -107,35 +162,24 @@ class FilesComponent extends Object
  *
  */
 
-	private function _getFileName($fileName, $itemName, $count = '0') {
-		$extension = $this->_getFileExtension($fileName);
-		$name = $this->_rewriteFileName($this->_rewriteFileName($itemName)) . '-' . $count . '.' . $extension;
-		if(is_file(WWW_ROOT . IMAGES_UPLOAD_FOLDER . DS . $name)) {
-			$name = $this->_getFileName($fileName, $itemName, $count + 1);
+	private function _getFileNameCounter($count = false) {
+		if(is_file($this->uploadFolder . $this->seoFileName)) {
+			$count = 0;
+			$name = $this->_getFileName($count + 1);
+		} else {
+			return $name;
 		}
-		return $name;
-	}
-
-/**
- * TODO
- */
-
-	private function _getFileExtension($fileName) {
-		$extension = $fileName;
-		if(strstr($fileName, '.')) {
-			$pieces = explode(".", $fileName);
-			$extension = $pieces[count($pieces) - 1];
-		}
-		return strtolower($extension);
 	}
 
 
+
+
 /**
- * TODO
+ * Check that the filesize is within allowed limits
  */
 
-	private function _isValidSize($file, $folder) {
-		$size = getimagesize($folder . DS .$file);
+	private function _isValidSize() {
+		$size = getimagesize($this->uploadFolder . DS .$this->fileName);
 		$width = $size[0];
 		$height = $size[1];
 		if($width > $this->maxsize || $height > $this->maxsize){
@@ -149,7 +193,7 @@ class FilesComponent extends Object
  */
 
 	private function _getImageSize($file, $folder) {
-		$size = getimagesize($folder . DS .$file);
+		$size = getimagesize($this->uploadFolder . DS .$this->fileName);
 		$width = $size[0];
 		$height = $size[1];
 		$uploadSize = $width . ' x ' . $height;
@@ -162,7 +206,7 @@ class FilesComponent extends Object
  * @param $name
  */
 
-	private function _rewriteFileName($name) {
+	static function rewriteFileName($name) {
 		$name = strtolower($name);
 		$name = str_replace("_", "-", $name);
 		$name = str_replace(" ", "-", $name);
@@ -175,37 +219,30 @@ class FilesComponent extends Object
 /**
  * Save file info to database TODO
  *
- * @param $id
  * @param $image
- * @param $model
- * @param $field
- * @param $type
  */
 
-	private function _saveFileToDatabase($id, $image, $model, $field = 'images', $type = 'multiple') {
-		$this->model = ClassRegistry::init($model);
-		$data = $this->model->findById($id);
-		if(($type == 'single') || (empty($data[$model][$field]))) {
+	private function _saveFileToDatabase($image) {
+		$model = ClassRegistry::init($this->model);
+		$data = $model->findById($this->id);
+		$images = $data[$this->model][$this->field] . ';' . $image;		
+		if(($this->type == 'single') || (empty($data[$this->model][$this->field]))) {
 			$images = $image;
-		} else {
-			$images = $data[$model][$field] . ';' . $image;		
 		}
-		$this->model->id = $id;
-		$this->model->saveField($field, $images);
+		$data2['id'] = $this->id;
+		$data2[$this->field] = $images;
+		$model->save($data2);
 	}
 
 /**
- * Save file info to database TODO
- *
- * @param $id
- * @param $model
- * @param $field
+ * Save file info to database
  */
 
-	private function _getItemName($id, $model, $field = 'name') {
-		$data = ClassRegistry::init($model)->findById($id);
-		return $data[$model][$field];		
+	private function _getItemName() {
+		$data = ClassRegistry::init($this->model)->findById($this->id);
+		return $data[$this->model]['name'];		
 	}
+
 
 }
 ?>
